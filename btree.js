@@ -28,13 +28,18 @@ class BTree {
     return this.insertIntoTree(value, this.tree);
   }
   show(node){
-    if(node === null){
+    if(this.isEmpty()){
       return;
     }
     console.log(node.value);
     this.show(node.left);
     this.show(node.right);
   }
+  isEmpty(){
+    return node == null;
+
+  }
+
   print(){
     this.show(this.tree);
   }
